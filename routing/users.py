@@ -9,12 +9,12 @@ router = routing.APIRouter(tags=["Users"], prefix="/users")
 
 
 @router.get(
-    '/{nickname}/',
+    '/{user_id}/',
     response_model=User,
     description='Получение пользователя'
 )
-async def get_users(nickname: str, user_service: UserService = Depends(get_user_service)) -> User:
-    user = user_service.get_user(nickname)
+async def get_users(user_id: str, user_service: UserService = Depends(get_user_service)) -> User:
+    user = user_service.get_user(user_id)
     return user
 
 @router.post(

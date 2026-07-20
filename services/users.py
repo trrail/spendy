@@ -6,8 +6,8 @@ class UserService:
     def __init__(self, repository: UserRepository) -> None:
         self.repository = repository
 
-    def get_user(self, nickname: str) -> User:
-        result = self.repository.get_user(nickname)
+    def get_user(self, user_id: str) -> User:
+        result = self.repository.get_user(user_id)
         return result
 
     def create_user(self) -> User:

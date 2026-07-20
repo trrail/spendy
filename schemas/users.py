@@ -2,7 +2,5 @@ from pydantic import BaseModel
 
 
 class User(BaseModel):
-    nickname: str
+    user_id: str
     name: str
-    surname: str
-    email: str
