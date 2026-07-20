@@ -1,5 +1,5 @@
-from repositories.users import UserRepository
-from services.users import UserService
+from app.repositories.users import UserRepository
+from app.services.users import UserService
 
 
 # repository - работа с БД

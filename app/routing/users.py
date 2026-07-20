@@ -1,8 +1,8 @@
 from fastapi import routing, Depends
 
-from depends import get_user_service
-from schemas.users import User
-from services.users import UserService
+from app.core.depends import get_user_service
+from app.schemas.users import User
+from app.services.users import UserService
 from starlette import status
 
 router = routing.APIRouter(tags=["Users"], prefix="/users")

@@ -1,5 +1,5 @@
-from repositories.users import UserRepository
-from schemas.users import User
+from app.repositories.users import UserRepository
+from app.schemas.users import User
 
 
 class UserService:

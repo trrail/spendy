@@ -1,8 +1,10 @@
 import uvicorn
 from fastapi import FastAPI
-from routing.users import router as user_router
+from app.routing.users import router as user_router
+from app.core.config import settings
 
-app = FastAPI(debug=True)
+
+app = FastAPI(title=settings.title, debug=settings.debug)
 app.include_router(user_router)
 
 if __name__ == '__main__':

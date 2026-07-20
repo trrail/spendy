@@ -1,0 +1,16 @@
+services:
+  app:
+    container_name: "spendy-app"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/.venv
+
+networks:
+  default:

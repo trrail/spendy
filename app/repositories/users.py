@@ -1,4 +1,4 @@
-from schemas.users import User
+from app.schemas.users import User
 
 
 class UserRepository:
